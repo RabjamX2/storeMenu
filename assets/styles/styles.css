@@ -1,65 +1,80 @@
+@font-face {
+	font-family: "Roboto Regular";
+	src: url("/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Roboto Bold";
+	src: url("/assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+}
 body {
-	font-family: Arial, sans-serif;
+	font-family: "Roboto Regular", sans-serif;
 	text-align: center;
 	background-color: #bd8b0b;
 	color: black;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	overflow: hidden; /* Hide scrollbars */
 }
 
 .menu-container {
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	height: 100vh;
-}
-
-.menu-column {
-	display: flex;
 	flex-direction: column;
-	height: 100%;
-}
-.menu-column div {
-	margin-top: auto;
-	margin-bottom: auto;
+	height: 100vh;
+	width: 100%;
 }
 
 .menu-item {
-	/* border: 2px solid #ccc; */
 	margin: 2px;
 	width: 100%;
+	height: 20vh;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+}
+
+.img-container {
+	display: flex;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	height: 100%;
+	width: 100%;
+	width: 50vw;
+}
+
+.img-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.menu-item .price {
+	font-family: "Roboto Regular", sans-serif;
+	font-size: 4rem;
+	padding: 0px;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	justify-content: center;
 }
 
 .menu-info {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-}
-
-.menu-item img {
-	width: 200px;
-	height: 150px;
-	object-fit: fill;
-}
-
-.menu-item .price {
-	padding: 0px;
-	padding-right: 20px;
-	font-size: 4rem;
+	margin-right: 5vw;
+	margin-left: 5vw;
 }
 
 .menu-item .name {
-	font-size: 3rem;
+	font-family: "Roboto Bold", sans-serif;
+	font-size: 3.5rem;
 	padding-bottom: 2px;
 	margin: 0px;
+	text-decoration: underline;
 }
 
 .menu-item .description {
 	padding-top: 2px;
 	margin: 0px;
-	font-size: 1.5rem;
+	font-size: 2.5rem;
 }
